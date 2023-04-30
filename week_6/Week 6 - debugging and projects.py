@@ -203,7 +203,7 @@ for i in columns:
 
 # ### Saving a DataFrame as CSV file
 
-# In[33]:
+# In[1]:
 
 
 # importing pandas as pd
@@ -242,14 +242,14 @@ df.to_csv('record.csv')
 # Display only one row and header of each dataset
 # 
 
-# In[36]:
+# In[2]:
 
 
 # Display the first 7 rows of - Top Apps in Google Play
 import pandas as pd
  
 data = pd.read_csv("Top-Apps-in-Google-Play.csv")
-df=data.iloc[0:8]
+df=data.iloc[0:16]
 
 df
 
@@ -351,6 +351,28 @@ df
 # 
 # You have been employed as an expert python developer to create a program to document the consumption categories of their products and brands. Using your knowledge of Pandas DataFrames develop the program that saves the list of products (export, segments and brands) in a .csv excel file.<br><br>
 # Hint: save the filename as <font color="green"><i>cadbury_market.csv</i></font>.
+
+# In[4]:
+
+
+import pandas as pd
+
+export ={"EXPORTS":["Cocoa Butter","cake","Liquor","Cocoa Powder"]}  
+
+segments = {'REFRESHMENT BEVERAGE':["Bournvita", "Hot chocolate"],
+        'CONFECTIONERY': ["Tom tom", "Butter mint"],
+        'INTERMEDIATE COCOA POWDER':["Cocoa Powder", "Cocoa Butter", "Cocoa Liquor", "Cocoa Cake"]}
+
+brands = {"BRANDS":["Cardbury Bournvita","Cardbury 3-in-1 hot chocolate","TomTom Classic","Tom tom strawberry","Buttermint"]}
+
+  
+# creating a dataframe from a dictionary 
+df = pd.DataFrame(export,segments,brands)
+
+# saving the dataframe
+df.to_csv('cadbury_market.csv')
+
+
 
 # In[ ]:
 
