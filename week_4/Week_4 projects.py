@@ -48,3 +48,24 @@ boys_score = [74,87,75,68,66,78,87,98,54,60]
 for i in range(len(boys)):
     print(boys[i],boys_age[i],boys_height[i],boys_score[i])
 
+# PROJECT 2
+# import numpy as pd
+# arr1 = pd.array([5,6,7,8,9])
+# print(arr1)
+# arr2 = pd.delete(arr1,[0,1])
+# print(arr2)
+
+print("WELCOME TO SOMIES $ CO")
+name = input("Enter your name ")
+age = int(input("Enter your age "))
+experience = int(input("Enter your years of experience "))
+if age >= 55 and experience > 25:
+    print(f"{name}, your annual tax revenue is 5,600,000 naira")
+elif age >= 45 and experience > 20:
+    print(f"{name}, your annual tax revenue is 4,480,000 naira")
+elif age >= 35 and experience > 10 :
+    print(f"{name}, your annual tax revenue is 1,500,000 naira")
+else:
+    print(f"{name}, your annual tax revenue is 500,000 naira")
+
+
